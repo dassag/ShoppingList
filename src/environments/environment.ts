@@ -6,7 +6,8 @@ export const environment = {
   production: false,
 
   //any name can be used for this variable
-  webAPIKey:'AIzaSyCfcqWXkEs9vmNqOzZV2KgoYYsejo1pd3s'
+  //use firebase web api key
+  webAPIKey:'#####################'
 };
 
 /*
