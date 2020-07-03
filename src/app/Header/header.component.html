@@ -1,0 +1,24 @@
+
+
+<nav>
+
+  <label class="logo">Recipe Book</label>
+  
+  <ul>
+    <li class="dropdown" appDropDown>
+      <a style="cursor: pointer;" class="dropdown-toggle" role="button" *ngIf="isAuthenticated">Manage <span class="caret"></span></a>
+      <ul class="dropdown-menu">
+        <li><a style="cursor: pointer;" (click)="onSave()">Save Data</a></li>
+        <li><a style="cursor: pointer;" (click)="onGetData()">Fetch Data</a></li>
+      </ul>
+    </li>
+  </ul>
+  <ul>
+    <!-- <li><a class="act" href="#" (click)="onSelect('recipe')">Recipes</a></li>
+    <li><a href="#" (click)="onSelect('shopping-list')">Shopping cart</a></li> -->
+    <li routerLinkActive="active"><a routerLink="/recipes" *ngIf="isAuthenticated">Recipes</a></li>
+    <li routerLinkActive="active"><a [routerLink]="['auth']" *ngIf="!isAuthenticated">Authenticate</a></li>
+    <li routerLinkActive="active"><a [routerLink]="['cart']">Shopping cart</a></li>
+    <li routerLinkActive="active"><a [routerLink]="['auth']" *ngIf="isAuthenticated" (click)="onLogOut()">Log Out</a></li>
+  </ul>
+</nav>
