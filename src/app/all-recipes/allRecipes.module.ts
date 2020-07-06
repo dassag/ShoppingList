@@ -6,9 +6,10 @@ import { RecipeDetailsComponent } from './recipe-details/recipe-details.componen
 import { RecipeListsComponent } from './recipe-lists/recipe-lists.component';
 import { RecipeItemsComponent } from './recipe-lists/recipe-items/recipe-items.component';
 import { RouterModule } from '@angular/router';
-import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { RecipesRoutingModule } from './recipes-routing.module';
+import { SharedModule } from '../shared/shared.module';
+//import { DropDownDirective } from '../shared/dropdown.directive';
 
 @NgModule({
     declarations:[
@@ -19,7 +20,13 @@ import { RecipesRoutingModule } from './recipes-routing.module';
         RecipeListsComponent,
         RecipeItemsComponent,
     ],
-    imports:[RouterModule,CommonModule,FormsModule,ReactiveFormsModule,RecipesRoutingModule],
+    imports:[
+        RouterModule,
+        SharedModule,
+        FormsModule,
+        ReactiveFormsModule,
+        RecipesRoutingModule
+    ],
 })
 export class AllRecipesModule{
 

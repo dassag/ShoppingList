@@ -7,7 +7,7 @@ export const environment = {
 
   //any name can be used for this variable
   //use firebase web api key
-  webAPIKey:'#####################'
+  webAPIKey:'AIzaSyCfcqWXkEs9vmNqOzZV2KgoYYsejo1pd3s'
 };
 
 /*
